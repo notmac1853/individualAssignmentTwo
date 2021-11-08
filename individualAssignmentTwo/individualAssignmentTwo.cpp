@@ -171,7 +171,7 @@ int testStream(std::string fileName) {
 
             //if any dequeues fail, give an error
             if (not ((dq1 == dq2) && (dq2 == dq3) && (dq3 == dq4))) {
-                std::cerr << "Peek error on line " << fileLineNumber << std::endl;
+                std::cerr << "Dequeue error on line " << fileLineNumber << std::endl;
             }
 
             //if success, make sure dequeues returned the same thing
@@ -179,28 +179,28 @@ int testStream(std::string fileName) {
                 if (not ((returnedDequeueValue1 == returnedDequeueValue2) &&
                     (returnedDequeueValue2 == returnedDequeueValue3) &&
                     (returnedDequeueValue4 == returnedDequeueValue4))) {
-                    std::cerr << "Peek error on line " << fileLineNumber << std::endl;
+                    std::cerr << "Dequeue error on line " << fileLineNumber << std::endl;
                 }
             }
             else if (farmingdale::statusCode::SUCCESS == dq2) {
                 if (not ((returnedDequeueValue1 == returnedDequeueValue2) &&
                     (returnedDequeueValue2 == returnedDequeueValue3) &&
                     (returnedDequeueValue4 == returnedDequeueValue4))) {
-                    std::cerr << "Peek error on line " << fileLineNumber << std::endl;
+                    std::cerr << "Dequeue error on line " << fileLineNumber << std::endl;
                 }
             }
             else if (farmingdale::statusCode::SUCCESS == dq3) {
                 if (not ((returnedDequeueValue1 == returnedDequeueValue2) &&
                     (returnedDequeueValue2 == returnedDequeueValue3) &&
                     (returnedDequeueValue4 == returnedDequeueValue4))) {
-                    std::cerr << "Peek error on line " << fileLineNumber << std::endl;
+                    std::cerr << "Dequeue error on line " << fileLineNumber << std::endl;
                 }
             }
             else if (farmingdale::statusCode::SUCCESS == dq4) {
                 if (not ((returnedDequeueValue1 == returnedDequeueValue2) &&
                     (returnedDequeueValue2 == returnedDequeueValue3) &&
                     (returnedDequeueValue4 == returnedDequeueValue4))) {
-                    std::cerr << "Peek error on line " << fileLineNumber << std::endl;
+                    std::cerr << "Dequeue error on line " << fileLineNumber << std::endl;
                 }
             }
             
